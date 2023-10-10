@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+/* Basic Button Style */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Change this color to your preferred button color */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.button:hover {
+  background-color: #0056b3; /* Change this color to your preferred hover color */
+}
+

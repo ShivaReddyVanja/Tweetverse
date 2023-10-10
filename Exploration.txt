@@ -1,0 +1,12 @@
+Creating follow route:{
+   Promise.all() - it takes array of promises to be resolved,and return then,
+   findById.select({ Following: 1 }) - it specifies which details from document to be fteched,
+   .includes() - this method return true if an element already present in array
+
+}
+
+Creating unfollow Route :{
+    .indexof() - this method returns the index of given element in an array,
+    .splice(index,count)- this method removes an element from the specifed index, count specifies how many elements from given index to be deleted,
+    
+}
