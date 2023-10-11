@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   server: {
-    host: '192.168.0.119', // Replace with your local IP address
+    host: '192.168.110.200', // Replace with your local IP address
   },
 })

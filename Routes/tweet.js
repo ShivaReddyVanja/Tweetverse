@@ -179,12 +179,14 @@ router.get("/",async(req,res)=>{
           // Read the image file and add its data to the tweet data
           if (imagePath) {
             try{
-            const imageBuffer = fs.readFileSync(imagePath);}
+            const imageBuffer = fs.readFileSync(imagePath);
+            tweetData.Image = imageBuffer.toString('base64');
+        }
             catch(error){
                 console.log(error);
             }
 
-            tweetData.Image = imageBuffer.toString('base64');
+            
           }
           tweetsWithImages.push(tweetData);
         }

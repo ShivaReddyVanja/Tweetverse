@@ -13,6 +13,7 @@ const PORT = config.PORT;
 const authRoutes = require("./Routes/auth")
 const userRoutes = require("./Routes/user")
 const tweetRoutes = require("./Routes/tweet");
+const searchTweets = require("./Routes/search");
 const User = require('./dbModels/User')
 const authenticateJwt = require("./middleware/authenticateJWT");
 const MY_IP = config.MY_IP;
@@ -44,8 +45,10 @@ app.post("/api/me",authenticateJwt,async (req,res)=>{
 app.use("/api/auth",authRoutes);
 app.use("/api/user",userRoutes);
 app.use("/api/tweet",tweetRoutes);
+app.use("/api/search",searchTweets);
+
 app.listen(PORT,MY_IP,()=>{
-    console.log("listening on port 3000")
+    console.log("listening on "+`http://${MY_IP}:3000`)
 })
 
 mongoose.connect(DB_URL).then(()=>{
